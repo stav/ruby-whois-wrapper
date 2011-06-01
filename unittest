@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import unittest
+
+from whois import Whois
+
+class TestWhois(unittest.TestCase):
+
+    def test_whois(self):
+        self.whois = Whois('redicecreations.com')
+        self.assertTrue(self.whois.whois)
+        self.whois = None
+
+if __name__ == '__main__':
+    unittest.main()
